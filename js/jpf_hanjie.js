@@ -88,7 +88,7 @@ function init(){
    document.addEventListener("mouseup", endBackground);
 
    // Add an event listner to the show solution button
-   document,getElementById("solve").addEventListener("click", function(){
+   document.getElementById("solve").addEventListener("click", function(){
       //remove the inline backgroundColor style from each cell
       for (var i = 0; i < puzzleCells.length; i++) {
          puzzleCells[i].style.backgroundColor = "";

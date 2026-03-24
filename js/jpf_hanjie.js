@@ -457,7 +457,7 @@ function setupPuzzle() {
       // set the cell background color in response to the mousedown event
       puzzleCells[i].onmousedown = setBackground;
       // Use a pencil image as the cursor
-      puzzleCells[i].style.cursor = "url(../images/jpf_pencil.png), pointer";
+      puzzleCells[i].style.cursor = "url(./images/jpf_pencil.png), pointer";
    }
    // check the puzzle solution
    document.getElementById("hanjieGrid").addEventListener("mouseup", function(){
@@ -520,13 +520,13 @@ function setBackground(e) {
    // Set the background based on the keyboard key
    if (e.shiftKey){
       cellBackground = "rgb(233, 207, 29)";
-      cursorType = "url(../images/jpf_eraser.png), cell";
+      cursorType = "url(./images/jpf_eraser.png), cell";
    } else if (e.altKey) {
       cellBackground = "rgb(255, 255, 255)";
-      cursorType = "url(../images/jpf_cross.png), crosshair";
+      cursorType = "url(./images/jpf_cross.png), crosshair";
    } else {
       cellBackground = "rgb(101, 101, 101)";
-      cursorType = "url(../images/jpf_pencil.png), pointer";
+      cursorType = "url(./images/jpf_pencil.png), pointer";
    }
    
    e.target.style.backgroundColor = cellBackground;
@@ -549,7 +549,7 @@ function endBackground() {
    // Remove the event listener for every puzzle cell
    for (var i = 0; i < puzzleCells.length; i++) {
       puzzleCells[i].removeEventListener("mouseenter", extendBackground);
-      puzzleCells[i].style.cursor = "url(../images/jpf_pencil.png), pointer";
+      puzzleCells[i].style.cursor = "url(./images/jpf_pencil.png), pointer";
    }
 }
 
